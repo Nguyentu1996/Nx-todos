@@ -1,5 +1,17 @@
-<nav>
-    <header>JS documentation</header>
+<!-- <ng-container *ngIf="expanded"> -->
+  <!-- <header>JS documentation</header>
+  <button>Open</button> -->
+<!-- </ng-container> -->
+<header>
+  <button class="navbar-toggle">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <p class="title">Todo Nx</p>
+</header>
+<nav id="side-nav">
+    <div id="header">JS documentation</div>
     <ul>
       <ng-container *ngFor="let lession of lessions" >
         <li>
