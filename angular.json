@@ -2,6 +2,9 @@
   "version": 2,
   "projects": {
     "todos": "apps/todos",
-    "todos-e2e": "apps/todos-e2e"
+    "todos-e2e": "apps/todos-e2e",
+    "web-shell-feature": "libs/web/shell/feature",
+    "web-shell-ui-layout": "libs/web/shell/ui/layout",
+    "web-shell-ui-nav": "libs/web/shell/ui/nav"
   }
 }

@@ -1,0 +1,27 @@
+nav {
+    position: fixed;
+    height: 100vh;
+    max-width: 300px;
+    top: 0;
+    left:0;
+    border-right: solid 2px rgba(0, 22, 22, 0.4);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+nav a {
+    padding: 10px 30px;
+    display: block;
+}

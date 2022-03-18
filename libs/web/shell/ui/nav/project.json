@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/web/shell/ui/nav",
+  "sourceRoot": "libs/web/shell/ui/nav/src",
+  "prefix": "todos-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shell/ui/nav"],
+      "options": {
+        "jestConfig": "libs/web/shell/ui/nav/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/shell/ui/nav/src/**/*.ts",
+          "libs/web/shell/ui/nav/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -71,10 +71,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/todos/src/**/*.ts",
-          "apps/todos/src/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/todos/src/**/*.ts", "apps/todos/src/**/*.html"]
       }
     },
     "test": {
