@@ -33,22 +33,20 @@ export class NavComponent implements OnInit {
   
   handleResize() {
     const match = window.matchMedia('(max-width: 900px)');
-    console.log(match);
     if(!match.matches) {
       this.sidenavContent.nativeElement.style.marginLeft = '0';
       this.sidenav.nativeElement.style.transform = 'none';
       this.sidenavContent.nativeElement.style.marginLeft = this.sideNavOffset;
       this.backdrop.nativeElement.classList.remove('backdrop-shown');
-
     }
     match.addEventListener('change', () => {
       if (match.matches) {
         this.sidenavContent.nativeElement.style.marginLeft = '0';
         this.sidenav.nativeElement.style.transform = '';
-        this.backdrop.nativeElement.classList.remove('backdrop-shown');
       } else {
         this.sidenavContent.nativeElement.style.marginLeft = '300px';
         this.sidenav.nativeElement.style.transform = 'none';
+        this.backdrop.nativeElement.classList.remove('backdrop-shown');
       }
     });
   }
