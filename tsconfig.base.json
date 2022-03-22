@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@todos-app/web/document": ["libs/web/document/src/index.ts"],
       "@todos-app/web/shell/feature": ["libs/web/shell/feature/src/index.ts"],
       "@todos-app/web/shell/ui/layout": ["libs/web/shell/ui/layout/src/index.ts"],
+      "@todos-app/web/shell/ui/main": ["libs/web/shell/ui/main/src/index.ts"],
       "@todos-app/web/shell/ui/nav": ["libs/web/shell/ui/nav/src/index.ts"]
     }
   },

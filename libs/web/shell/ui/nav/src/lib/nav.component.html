@@ -1,28 +1,35 @@
-<!-- <ng-container *ngIf="expanded"> -->
-  <!-- <header>JS documentation</header>
-  <button>Open</button> -->
-<!-- </ng-container> -->
 <header>
-  <button class="navbar-toggle">
+  <button class="navbar-toggle" (click)="expanded()">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
   <p class="title">Todo Nx</p>
 </header>
-<nav id="side-nav">
-    <div id="header">JS documentation</div>
-    <ul>
-      <ng-container *ngFor="let lession of lessions" >
-        <li>
-          <a
-              class="nav-link"
-              href="#Introduction"
-          >
-            {{lession}}
-          </a>
-      </li>
-      </ng-container>
-       
-    </ul>
-</nav>
+
+<div id="side-nav-container">
+  <div class="side-nav-backdrop" #backdrop></div>
+  <nav id="side-nav" #sidenav>
+      <ul>
+        <div id="header">JS documentation</div>
+        <ng-container *ngFor="let lession of lessions" >
+          <li>
+            <a
+                class="nav-link"
+                href="#Introduction"
+            >
+              {{lession}}
+            </a>
+        </li>
+        </ng-container>
+      </ul>
+  </nav>
+  <div id="side-nav-content" #sidenavContent>
+    <section class="sidenav-content-container">
+      <main class="main-content">
+        <ng-content></ng-content>
+      </main>
+    </section>
+  </div>
+</div>
+

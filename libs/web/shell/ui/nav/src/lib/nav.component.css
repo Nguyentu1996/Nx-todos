@@ -1,42 +1,94 @@
-nav {
+header {
     position: fixed;
-    height: calc(100vh - 60px);
-    width: 300px;
-    left:0;
-    border-right: solid 2px rgba(0, 22, 22, 0.4);
+    width: 100%;
+    height: 100%;
+}
+#side-nav-container .side-nav-backdrop {
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25,1);
+    transition-property: background-color, visibility;
+}
+#side-nav-container {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+.side-nav-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    z-index: 3;
+    visibility: hidden;
+}
+.backdrop-shown {
+    background-color: #0009;
+    visibility: visible;
+}
+#side-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    min-width: 300px;
+    border-right: 2px solid #ddd;
     display: flex;
     flex-direction: column;
-    transition: left 600ms ease;
+    z-index: 3;
+    background-color: #fff;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 400ms ease;
+} 
+
+#side-nav ul {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+    overflow: auto;
+} 
+#side-nav-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-property: transform,margin-left,margin-right; 
 }
+
+.main-content {
+    min-height: 100vh;
+    overflow: auto;
+    padding: 60px 20px 20px 20px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}   
 a {
     text-decoration: none;
     color: inherit;
     font-size: inherit;
     cursor: pointer;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    overflow: auto;
-    overflow-x: hidden;
-  
-    flex: 1;
-    /* flex-direction: column; */
-}
+
 nav a {
     padding: 10px 30px;
     display: block;
 }
 nav #header {
-    text-align: center;
     margin: 10px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+
 }
 header {
     height: 60px;
     display: flex;
     align-items: center;
     background-color: #be3144;
+    z-index: 10;
 }
 .navbar-toggle {
     display: block;
@@ -68,11 +120,5 @@ header {
     color: #fff;
 }
 @media (max-width: 815px) {
-      /* For mobile phones: */
-
-    nav {
-        position: fixed;
-        border: none;
-        left: -300px;
-    }
+    /* For mobile phones: */
 }

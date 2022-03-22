@@ -3,8 +3,10 @@
   "projects": {
     "todos": "apps/todos",
     "todos-e2e": "apps/todos-e2e",
+    "web-document": "libs/web/document",
     "web-shell-feature": "libs/web/shell/feature",
     "web-shell-ui-layout": "libs/web/shell/ui/layout",
+    "web-shell-ui-main": "libs/web/shell/ui/main",
     "web-shell-ui-nav": "libs/web/shell/ui/nav"
   }
 }

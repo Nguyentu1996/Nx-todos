@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/web/document",
+  "sourceRoot": "libs/web/document/src",
+  "prefix": "todos-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/document"],
+      "options": {
+        "jestConfig": "libs/web/document/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/web/document/src/**/*.ts", "libs/web/document/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
