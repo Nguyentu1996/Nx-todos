@@ -38,6 +38,8 @@ export class NavComponent implements OnInit {
       this.sidenavContent.nativeElement.style.marginLeft = '0';
       this.sidenav.nativeElement.style.transform = 'none';
       this.sidenavContent.nativeElement.style.marginLeft = this.sideNavOffset;
+      this.backdrop.nativeElement.classList.remove('backdrop-shown');
+
     }
     match.addEventListener('change', () => {
       if (match.matches) {
