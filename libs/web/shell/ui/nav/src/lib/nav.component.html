@@ -16,9 +16,9 @@
           <li>
             <a
                 class="nav-link"
-                href="#Introduction"
+                href={{lession.href}}
             >
-              {{lession}}
+              {{lession.title}}
             </a>
         </li>
         </ng-container>
@@ -26,9 +26,7 @@
   </nav>
   <div id="side-nav-content" #sidenavContent>
     <section class="sidenav-content-container">
-      <main class="main-content">
         <ng-content></ng-content>
-      </main>
     </section>
   </div>
 </div>

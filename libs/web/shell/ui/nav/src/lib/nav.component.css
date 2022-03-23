@@ -53,27 +53,25 @@ header {
     position: relative;
     z-index: 1;
     display: block;
-    height: 100%;
+    min-height: 100%;
     overflow: hidden;
     transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-property: transform,margin-left,margin-right; 
+    transition-property: transform,margin-left,margin-right;
 }
 
-.main-content {
-    min-height: 100vh;
-    overflow: auto;
-    padding: 60px 20px 20px 20px;
-    /* max-width: 1200px; */
-    margin: 0 auto;
-}   
+.sidenav-content-container {
+    height: auto;
+}
 a {
     text-decoration: none;
     color: inherit;
     font-size: inherit;
     cursor: pointer;
 }
-
+nav li:hover {
+    background-color: rgb(187, 206, 206);
+}
 nav a {
     padding: 10px 30px;
     display: block;
